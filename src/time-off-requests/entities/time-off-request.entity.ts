@@ -3,26 +3,26 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 @Entity()
 export class TimeOffRequest {
   @PrimaryGeneratedColumn('uuid')
-  id: string;
+  id!: string;
 
   @Column({ type: 'text' })
-  employeeId: string;
+  employeeId!: string;
 
   @Column({ type: 'text' })
-  locationId: string;
+  locationId!: string;
 
   @Column({ type: 'float' })
-  amount: number;
+  amount!: number;
 
   @Column({ type: 'text' })
-  status: string;
+  status!: string;
 
   @Column({ type: 'text', nullable: true })
-  failureReason: string | null;
+  failureReason!: string | null;
 
   @Column({ type: 'text' })
-  idempotencyKey: string;
+  idempotencyKey!: string;
 
   @Column({ type: 'text', nullable: true })
-  externalReference: string | null;
+  externalReference!: string | null;
 }

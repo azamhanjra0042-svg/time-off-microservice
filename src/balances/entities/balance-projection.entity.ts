@@ -4,35 +4,35 @@ import { Column, Entity, PrimaryGeneratedColumn, Unique } from 'typeorm';
 @Unique(['employeeId', 'locationId'])
 export class BalanceProjection {
   @PrimaryGeneratedColumn('uuid')
-  id: string;
+  id!: string;
 
   @Column()
-  employeeId: string;
+  employeeId!: string;
 
   @Column()
-  locationId: string;
+  locationId!: string;
 
   @Column('float', { default: 0 })
-  hcmBalanceAmount: number;
+  hcmBalanceAmount!: number;
 
   @Column('float', { default: 0 })
-  pendingRequestAmount: number;
+  pendingRequestAmount!: number;
 
   @Column('float', { default: 0 })
-  approvedUnsettledAmount: number;
+  approvedUnsettledAmount!: number;
 
   @Column('float', { default: 0 })
-  projectedAvailableAmount: number;
+  projectedAvailableAmount!: number;
 
   @Column({ default: 'fresh' })
-  syncStatus: string;
+  syncStatus!: string;
 
   @Column({ type: 'datetime', nullable: true })
-  lastRealtimeSyncAt: Date | null;
+  lastRealtimeSyncAt!: Date | null;
 
   @Column({ type: 'datetime', nullable: true })
-  lastBatchSyncAt: Date | null;
+  lastBatchSyncAt!: Date | null;
 
   @Column({ default: 0 })
-  version: number;
+  version!: number;
 }

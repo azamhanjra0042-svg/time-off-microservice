@@ -3,23 +3,23 @@ import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from 'typeor
 @Entity()
 export class RequestEvent {
   @PrimaryGeneratedColumn('uuid')
-  id: string;
+  id!: string;
 
   @Column({ type: 'text' })
-  requestId: string;
+  requestId!: string;
 
   @Column({ type: 'text' })
-  eventType: string;
+  eventType!: string;
 
   @Column({ type: 'text', nullable: true })
-  fromStatus: string | null;
+  fromStatus!: string | null;
 
   @Column({ type: 'text', nullable: true })
-  toStatus: string | null;
+  toStatus!: string | null;
 
   @Column({ type: 'simple-json', nullable: true })
-  payload: any;
+  payload!: any;
 
   @CreateDateColumn()
-  createdAt: Date;
+  createdAt!: Date;
 }

@@ -2,21 +2,21 @@ import { IsNumber, IsPositive, IsString } from 'class-validator';
 
 export class CreateTimeOffRequestDto {
   @IsString()
-  employeeId: string;
+  employeeId!: string;
 
   @IsString()
-  locationId: string;
+  locationId!: string;
 
   @IsNumber()
   @IsPositive()
-  amount: number;
+  amount!: number;
 
   @IsString()
-  startDate: string;
+  startDate!: string;
 
   @IsString()
-  endDate: string;
+  endDate!: string;
 
   @IsString()
-  reason: string;
+  reason!: string;
 }
